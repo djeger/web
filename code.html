@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GameNight | School Board Game Club</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#490013",
+              "surface-container-highest": "#222532",
+              "on-primary-container": "#004d57",
+              "error": "#ff6e84",
+              "inverse-surface": "#faf8ff",
+              "on-tertiary-fixed-variant": "#592f00",
+              "error-dim": "#d73357",
+              "on-surface": "#f0f0fd",
+              "secondary-fixed-dim": "#f7a8ff",
+              "on-secondary-fixed": "#5d006e",
+              "tertiary-dim": "#ea8400",
+              "outline-variant": "#464752",
+              "on-primary-fixed": "#003840",
+              "outline": "#737580",
+              "on-error-container": "#ffb2b9",
+              "on-background": "#f0f0fd",
+              "on-tertiary-container": "#462400",
+              "surface": "#0c0e17",
+              "error-container": "#a70138",
+              "on-tertiary": "#552d00",
+              "secondary-container": "#a100bd",
+              "surface-dim": "#0c0e17",
+              "inverse-primary": "#006976",
+              "secondary-fixed": "#fbbdff",
+              "surface-tint": "#81ecff",
+              "primary-container": "#00e3fd",
+              "surface-container-high": "#1c1f2b",
+              "on-secondary": "#3c0048",
+              "inverse-on-surface": "#53545f",
+              "secondary": "#e966ff",
+              "tertiary-fixed": "#ff9727",
+              "on-surface-variant": "#aaaab7",
+              "primary": "#81ecff",
+              "surface-container-lowest": "#000000",
+              "on-primary": "#005762",
+              "tertiary": "#ffa44c",
+              "on-primary-fixed-variant": "#005762",
+              "primary-fixed": "#00e3fd",
+              "background": "#0c0e17",
+              "on-secondary-container": "#fff5fa",
+              "surface-container": "#171924",
+              "surface-container-low": "#11131d",
+              "on-secondary-fixed-variant": "#8b00a3",
+              "primary-fixed-dim": "#00d4ec",
+              "on-tertiary-fixed": "#281200",
+              "primary-dim": "#00d4ec",
+              "secondary-dim": "#c500e6",
+              "surface-bright": "#282b3a",
+              "surface-variant": "#222532",
+              "tertiary-fixed-dim": "#f18900",
+              "tertiary-container": "#fd9000"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0c0e17;
+            color: #f0f0fd;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl no-border bg-slate-900/50 shadow-[0_20px_40px_rgba(129,236,255,0.08)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<div class="text-2xl font-bold tracking-tighter text-cyan-400 uppercase font-['Space_Grotesk']">
+                GameNight
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1 font-['Space_Grotesk'] tracking-tight transition-all active:scale-95 duration-200" href="#">Games</a>
+<a class="text-slate-400 hover:text-cyan-300 transition-colors font-['Space_Grotesk'] tracking-tight hover:scale-105 transition-all active:scale-95 duration-200" href="#">Schedule</a>
+<a class="text-slate-400 hover:text-cyan-300 transition-colors font-['Space_Grotesk'] tracking-tight hover:scale-105 transition-all active:scale-95 duration-200" href="#">About</a>
+<a class="text-slate-400 hover:text-cyan-300 transition-colors font-['Space_Grotesk'] tracking-tight hover:scale-105 transition-all active:scale-95 duration-200" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label font-bold uppercase tracking-wider hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(129,236,255,0.3)]">
+                    Join Club
+                </button>
+<div class="text-slate-400 hover:text-cyan-300 cursor-pointer transition-all active:scale-95">
+<span class="material-symbols-outlined text-3xl" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow pt-24">
+<!-- Hero Section -->
+<section class="relative px-6 py-20 lg:py-32 overflow-hidden">
+<!-- Background Decorative Elements -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full"></div>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block px-4 py-1 rounded-full bg-secondary/20 text-secondary font-label text-sm font-bold tracking-widest uppercase mb-6">
+                            Est. 2024 • Room 302
+                        </span>
+<h1 class="text-5xl lg:text-7xl font-headline font-bold tracking-tighter leading-tight mb-6">
+                            Welcome to the <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Board Game Collective!</span>
+</h1>
+<p class="text-xl text-on-surface-variant font-body mb-10 max-w-lg leading-relaxed">
+                            Join us after school for epic gaming sessions. From deep strategy to chaotic party games, we've got a seat at the table for you.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label font-bold text-lg uppercase tracking-wider hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(0,227,253,0.4)]">
+                                Join Club
+                            </button>
+<button class="bg-surface-container-highest text-secondary border border-secondary/20 px-8 py-4 rounded-full font-label font-bold text-lg uppercase tracking-wider hover:bg-secondary/10 active:scale-95 transition-all">
+                                View Collection
+                            </button>
+</div>
+</div>
+<div class="relative">
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.5)] transform rotate-2">
+<img alt="Board game components" class="w-full h-[500px] object-cover" data-alt="Close-up of premium board game miniatures and colorful dice on a dark velvet tabletop with neon cyan and violet accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_GxcBaGaoAV_LKogc4kdlide0l6EKXvc0xMVMO_uIvtVz1TFitQUAHxwkZIdUYRt-hyJ2BC8haGQK-us0IqKkTgz8y7ZPiHQv0F2PlDJPsRpVmu8fYsTGrno9Rdi_MYlnKrF287AHh7It-442PjKV92i8OBDMj6dQxDQKptyXw8GOrQTK-q4SmYhPbuSzdNxylLAEjbwVtZGbwT2TTbqiNnSICFe_-DcZMC3zNwtc6ov0S6L4yGHaPzoOsbJwgeRqYKWD2x3V0eM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+<!-- Floating "Game Tokens" -->
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-surface-container-high rounded-2xl flex items-center justify-center border border-primary/30 shadow-xl transform -rotate-12 backdrop-blur-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="casino">casino</span>
+</div>
+<div class="absolute -bottom-10 -left-10 w-32 h-32 bg-surface-container-high rounded-2xl flex items-center justify-center border border-secondary/30 shadow-xl transform rotate-12 backdrop-blur-md">
+<span class="material-symbols-outlined text-secondary text-5xl" data-icon="style">style</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Schedule Section -->
+<section class="px-6 py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-4xl font-headline font-bold tracking-tight mb-4">Upcoming Game Days</h2>
+<p class="text-on-surface-variant max-w-md">Our weekly rotation of genres ensures there's always something new to play.</p>
+</div>
+<div class="flex gap-4">
+<div class="p-3 rounded-full bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors text-primary">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Schedule Card 1 -->
+<div class="bg-surface-container rounded-xl p-8 hover:bg-surface-container-highest transition-all group relative overflow-hidden transform hover:-translate-y-2">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="strategy">strategy</span>
+</div>
+<div class="flex items-center gap-3 mb-6">
+<span class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined" data-icon="tactic">tactic</span>
+</span>
+<span class="font-label font-bold text-primary uppercase tracking-widest">Mondays</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3">Strategy Games</h3>
+<p class="text-on-surface-variant mb-8">Deep thinking, resource management, and long-term planning.</p>
+<div class="space-y-3 pt-6 border-t border-outline-variant/30">
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span>
+<span>3:30 PM - 5:30 PM</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<span>School Library, Room 302</span>
+</div>
+</div>
+</div>
+<!-- Schedule Card 2 -->
+<div class="bg-surface-container rounded-xl p-8 hover:bg-surface-container-highest transition-all group relative overflow-hidden transform hover:-translate-y-2">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="celebration">celebration</span>
+</div>
+<div class="flex items-center gap-3 mb-6">
+<span class="w-12 h-12 flex items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</span>
+<span class="font-label font-bold text-secondary uppercase tracking-widest">Wednesdays</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3">Co-op Quests</h3>
+<p class="text-on-surface-variant mb-8">Work together against the board in epic dungeon crawls and mysteries.</p>
+<div class="space-y-3 pt-6 border-t border-outline-variant/30">
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<span>3:30 PM - 5:00 PM</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span>Student Lounge</span>
+</div>
+</div>
+</div>
+<!-- Schedule Card 3 -->
+<div class="bg-surface-container rounded-xl p-8 hover:bg-surface-container-highest transition-all group relative overflow-hidden transform hover:-translate-y-2">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="mood">mood</span>
+</div>
+<div class="flex items-center gap-3 mb-6">
+<span class="w-12 h-12 flex items-center justify-center rounded-lg bg-tertiary/10 text-tertiary">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+</span>
+<span class="font-label font-bold text-tertiary uppercase tracking-widest">Fridays</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3">Party Games</h3>
+<p class="text-on-surface-variant mb-8">High energy, social deduction, and fast-paced fun to end the week.</p>
+<div class="space-y-3 pt-6 border-t border-outline-variant/30">
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span>
+<span>3:30 PM - 6:00 PM</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<span>School Library, Room 302</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid (New Section to match high-end UI requirement) -->
+<section class="px-6 py-24 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 bg-gradient-to-br from-surface-container to-surface-container-high p-10 rounded-2xl flex flex-col justify-between min-h-[300px] border border-outline-variant/10">
+<h4 class="text-3xl font-headline font-bold mb-4">Expanding Collection</h4>
+<p class="text-on-surface-variant mb-8 max-w-sm">From classics like Catan to modern hits like Wingspan. Our library grows every month based on your votes!</p>
+<div class="flex -space-x-4">
+<img class="w-14 h-14 rounded-full border-4 border-surface object-cover" data-alt="Close up of a board game card with fantasy illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbtL-HRd4QB4pr7bEiU7y6TPJZ-Db_SqqZu0ywElBwyopVps_kdgn-WpmaLsniVRT5HIvwnuZU0pedv7FXF7hdm1vI0CD6By8Xmw1wgPKJN9-p-HIqdRslLlmyNwoPTSdkQTBQK5tYk9x7Zn1UofiXtllrR4xdsgX9hQEYSOzvkETYQ5uEpaRxqaJU6GvwDIsW4n0o3iP24jCxZnsUQm8kIO5cUbIItnZUv5orSUrGFfKR6Y03Aiahy8hZ6kILN5mHNS7tE5QfLOM"/>
+<img class="w-14 h-14 rounded-full border-4 border-surface object-cover" data-alt="Close up of a hexagonal game tile with forest art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEfFkodB1XVakuu1Hu6apfO2aFVcd7OPRfZ6A4GyY8Uj6BdxnQVRUZ0hITa8kzYoMNZoosEsPRKwLruLI8M6qPrk8IRvR3Ij83HIGtVx71n5MPKt0kcd-LpuYy3X71wZugTPlvfovPPt9uxQlmFw7MPoaIREMnvb_a8z1YXPcCbRxtM9khQpq-moD1h5IDFNDyPUmcDq2I1kJXELxSiNbc0nK47VELoxN4Qpw4l48FLOokZqfl0EYdfEKnqfNrk2Qqc71RwGjLy3E"/>
+<img class="w-14 h-14 rounded-full border-4 border-surface object-cover" data-alt="Colorful plastic game pieces in a pile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Rknw_70zKgBr0B3mY6rMP2p-FLVe4v3Lu9hGwBxHeZaaLiY3jNK5ywhHM-haOfZkoQb9terAPuYbtnyWaD_42CxRicV1hnmHjCgtqmtYqHehhgyqPI5u13BouD1ndiLtOf0Tb9XG6QOCkcrabFn2E-yuUasE3nUHYvjmmSE7p73jN9BW4QRDNzS0jvCYgWjuZAuP2qiRz2uidk907VulDd_3pi8DBefFCxrl6D73d6yZHfJ4IRlrwhkSpYroNh-80BtK59gAoGY"/>
+<div class="w-14 h-14 rounded-full border-4 border-surface bg-primary text-on-primary flex items-center justify-center font-bold text-sm">+50</div>
+</div>
+</div>
+<div class="bg-secondary/10 p-10 rounded-2xl flex flex-col items-center justify-center text-center border border-secondary/20 group hover:bg-secondary/20 transition-all">
+<div class="text-5xl font-headline font-bold text-secondary mb-2">120+</div>
+<div class="font-label uppercase tracking-widest text-xs font-bold text-on-surface-variant">Active Players</div>
+</div>
+<div class="bg-primary/10 p-10 rounded-2xl flex flex-col items-center justify-center text-center border border-primary/20 group hover:bg-primary/20 transition-all">
+<div class="text-5xl font-headline font-bold text-primary mb-2">Weekly</div>
+<div class="font-label uppercase tracking-widest text-xs font-bold text-on-surface-variant">Tournaments</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full py-12 px-6 mt-auto bg-slate-900 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto border-t border-slate-800/50 pt-10">
+<div>
+<div class="text-lg font-bold text-slate-200 mb-6 font-['Plus_Jakarta_Sans']">
+                    GameNight Collective
+                </div>
+<p class="text-slate-500 max-w-sm mb-8 font-['Plus_Jakarta_Sans'] text-sm">
+                    Bringing students together through the joy of tabletop gaming. Join us every week in Room 302.
+                </p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-purple-400 transition-colors transition-opacity hover:opacity-80" href="#">Instagram</a>
+<a class="text-slate-500 hover:text-purple-400 transition-colors transition-opacity hover:opacity-80" href="#">Discord</a>
+<a class="text-slate-500 hover:text-purple-400 transition-colors transition-opacity hover:opacity-80" href="#">School Portal</a>
+<a class="text-slate-500 hover:text-purple-400 transition-colors transition-opacity hover:opacity-80" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="flex flex-col md:items-end justify-between">
+<div class="bg-surface-container-highest p-6 rounded-xl border border-outline-variant/10 w-full md:max-w-xs">
+<h5 class="text-sm font-label font-bold text-primary uppercase mb-4 tracking-widest">Get Updates</h5>
+<div class="flex gap-2">
+<input class="bg-surface-container-lowest border-none rounded-lg text-sm flex-grow focus:ring-1 focus:ring-primary/40" placeholder="Your school email" type="email"/>
+<button class="bg-primary p-2 rounded-lg text-on-primary">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+</div>
+<p class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm mt-8">
+                    © 2024 Board Game Collective. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
